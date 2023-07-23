@@ -2,16 +2,18 @@
 :root {
     --primary-blue: #A8D4D7 !important;
     --primary-black: #0F0D0B;
-    --spacing-company: 3rem;
+    --spacing-company: 0.5rem;
+    --block-spacing-vertical: 0.5rem;
     --font-weight: 400;
     --border-radius: 0;
   }
   
   /* Typography */
   h2,
-  h3,
-  hgroup> :last-child {
-    font-weight: 200;
+  h3
+  {
+    font-weight: 300;
+    text-align: center;
   }
 
   p {
@@ -32,16 +34,16 @@
     padding-left: 3rem !important;
     padding-right: 3rem !important;
   }
-  .hero h1, .hero strong, .hero a{
+  .hero h1, .hero h2, .hero strong, .hero a{
     --color: var(--primary-black) !important;
+    text-align: center;
   }
-  
+  .hero h2 {
+  --font-size: 2rem !important;
+  }
+
   header {
     padding: var(--spacing-company) 0;
-  }
-  
-  header hgroup> :last-child {
-    color: var(--h3-color);
   }
   
   header hgroup {
@@ -55,17 +57,39 @@
   }
   
   /* Main */
+
   @media (min-width: 992px) {
     main .grid {
       grid-column-gap: var(--spacing-company);
-      grid-template-columns: auto 25%;
     }
   }
-  
+  @media (max-width: 768px) {
+    .container-fluid {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px; /* Adjust the spacing value as per your requirements */
+    }
+    .rounded-button {
+      white-space: nowrap;
+    }
+    nav, nav ul, nav li {
+      text-align: center;
+      display: block !important;
+      flex:1;
+      /* Add any additional styles you want for mobile */
+    }
+  }
+
+  .review {
+    margin-top: 0rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
   form.grid {
     grid-row-gap: 0;
   }
-  
+
   /* Aside nav */
   aside img {
     margin-bottom: 0.25rem;
@@ -74,16 +98,34 @@
   aside p {
     margin-bottom: var(--spacing-company);
     line-height: 1.25;
+    text-align: center;
   }
   
   /* Add rounded corners and thick black outline to the button */
+  .dark-button {
+    background-color: var(--primary-blue) !important;
+    color: black; 
+    border: 4px solid white ; /* Adjust this value to control the thickness of the outline */
+    padding: 10px 20px; /* Add padding to give the button some space around the text */
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s, border-color 0.3s; /* Add smooth transition on hover */
+  }
+
+/* Hover styles */
+    .dark-button:hover {
+    background-color: var(--primary-black) !important; /* Change background color on hover */
+    color: var(--primary-blue) !important; /* Make text transparent on hover */
+  }
+
+  /* Add rounded corners and thick black outline to the button */
   .rounded-button {
-    border-radius: 14px; /* Adjust this value to control the roundness */
     background-color: transparent;
     border: 4px solid var(--primary-black) ; /* Adjust this value to control the thickness of the outline */
     padding: 10px 20px; /* Add padding to give the button some space around the text */
+    width: 100%;
     transition: background-color 0.3s, color 0.3s, opacity 0.3s, border-color 0.3s; /* Add smooth transition on hover */
   }
+
 /* Hover styles */
     .rounded-button:hover {
     background-color: var(--primary-black) !important; /* Change background color on hover */

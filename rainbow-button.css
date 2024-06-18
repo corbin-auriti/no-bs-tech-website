@@ -1,6 +1,5 @@
  /* Rounded Rainbow Button */
  .rounded-button.rainbow {
-    background-color: #ffffffc0;
     border: 6px solid;
     border-image: conic-gradient(from 0deg, red, yellow, lime, aqua, blue, magenta, red) 1;
     animation: 10s rotate linear infinite;

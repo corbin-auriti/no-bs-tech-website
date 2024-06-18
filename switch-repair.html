@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nintendo Switch Repairs - No BS Technologies Inc</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://no-bs-repairs.com/switch-repair">
+    <meta property="og:title" content="Nintendo Switch Repairs - No BS Technologies Inc">
+    <meta property="og:description" content="Professional Nintendo Switch repair services in Tsawwassen, Delta & Vancouver. Joy-Con drift, screen replacement, battery replacement, and more. Quality repairs with transparent pricing.">
+    <meta property="og:image" content="banner-social.webp">
+    <meta name="author" content="Corbin Auriti - No BS Technologies Inc"> 
+    <meta name="description" content="Professional Nintendo Switch repair services in Tsawwassen, Delta & Vancouver. Joy-Con drift, screen replacement, battery replacement, and more. Quality repairs with transparent pricing.">
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="canonical" href="https://no-bs-repairs.com/switch-repair" />
+
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="custom.css"/>
+    <link rel="stylesheet" href="rainbow-button.css"/>
+  </head>
+  <body>
+    <!-- Body-->
+
+    <!-- Hero Template-->
+    <div id="hero"></div>
+
+    <!-- Main -->
+    <main class="container">
+      <!-- Info -->
+      <div class="grid">
+          <div>
+            <article class="review">
+              <h2>Nintendo Switch Repair Services</h2>
+              <h3><u>1 Year Standard Warranty Included</u></h3>
+              <p>
+                At No BS Tech, we specialize in a variety of Nintendo Switch, Switch Lite & Switch OLED repair services. Whether you're dealing with Joy-Con drift, a broken screen, not powering on, battery issues, we're here to help. We provide high-quality repairs using the best available parts, ensuring your console is back in top condition.
+              </p>
+            </article>
+          </div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <article class="review">
+            <h2>Joy-Con Drift Repair</h2>
+            <p>
+              Experiencing Joy-Con drift? We can fix it! Our Joy-Con drift repair service will restore your controller's functionality.
+            </p>
+            <p><strong>Price:</strong> $40 each</p>
+          </article>
+        </div>
+
+        <div>
+          <article class="review">
+            <h2>Screen Replacement</h2>
+            <p>
+              Cracked or unresponsive screen? Let us replace it with a high-quality screen to get you back to gaming.
+            </p>
+            <p><strong>Price:</strong> $150</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <article class="review">
+            <h2>Battery Replacement</h2>
+            <p>
+              Is your Nintendo Switch not holding a charge? Our battery replacement service will ensure your console has the power it needs.
+            </p>
+            <p><strong>Price:</strong> $100</p>
+          </article>
+        </div>
+
+        <div>
+          <article class="review">
+            <h2>Charging Port Repair</h2>
+            <p>
+              Having trouble charging your Switch? We can repair or replace the USB-C charging port to get your console powered up again.
+            </p>
+            <p><strong>Price:</strong> $150</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="grid">
+          <article class="review">
+            <h2>Other Repairs</h2>
+            <p>
+              From motherboard issues like liquid damage, to broken game cartridge slots, joycon rails, headphone jacks, micro-sd card not reading, we offer a wide range of repair services for your Nintendo Switch and have been working on them since they came out in 2017. Contact us or book an appointment for a quote on any specific issue you are experiencing.
+            </p>
+            <p><strong>Price:</strong> Varies</p>
+            <a href="./appointment" class="rounded-button rainbow">
+                🗓️ Book Appointment
+            </a>
+            <br><br><br>
+            <a href="./contact-form" class="rounded-button">
+                ✉️ Contact Us
+            </a>
+          </article>
+        </div>
+        <div class="grid">
+            <article class="review">
+              <h2>Looking to Repair Your Own Switch?</h2>
+              <p>
+                We highly recommend checking out the Repair Wiki which we frequent and contribute to.
+              </p>
+              <a href="https://repair.wiki/w/Nintendo_Switch" class="rounded-button">Repair.Wiki</a>
+            </article>
+          </div>
+    </main>
+    <!-- ./ Main -->
+
+    <!-- Footer Template-->
+    <div id="footer"></div>
+
+    <script>
+      // Function to load HTML content
+      function loadHTML(elementId, url, callback) {
+        fetch(url)
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+            if (callback) callback();
+          })
+          .catch(error => console.error('Error loading HTML:', error));
+      }
+
+      // Function to replace H1 element
+      function replaceTitle(elementId, newText) {
+        const container = document.getElementById(elementId);
+        const h1 = container.querySelector('h1');
+        if (h1) {
+          h1.textContent = newText;
+        }
+      }
+
+      // Load hero and footer
+      loadHTML('hero', 'hero.html', () => replaceTitle('hero', 'Nintendo Switch Repairs @ No BS Technologies Inc.'));
+      loadHTML('footer', 'footer.html');
+    </script>
+
+  </body>
+</html>

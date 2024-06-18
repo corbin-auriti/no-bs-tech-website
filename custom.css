@@ -1,19 +1,30 @@
 /* Global CSS variables */
 :root {
     --primary-blue: #A8D4D7 !important;
-    --primary-black: #0F0D0B;
+    --primary-black: #0F0D0B !important;
+    --transparent-button: #ffffff8f;
     --spacing-company: 0.5rem;
     --block-spacing-vertical: 0.5rem;
     --font-weight: 400;
     --border-radius: 0;
   }
   
+  h1 {
+    color: var(--primary-black);
+  }
+
   /* Typography */
   h2,
-  h3
+  h3,
+  h4,
+  h5
   {
-    font-weight: 300;
+    font-weight: bold;
     text-align: center;
+  }
+
+  .list {
+    text-align: left !important;
   }
 
   p {
@@ -28,12 +39,38 @@
   
   /* Header */
   .hero {
+    position: relative;
     background-color: var(--primary-blue);
     background-position: center;
     background-size: cover;
     padding-left: 3rem !important;
     padding-right: 3rem !important;
+    z-index: 2;
   }
+  .hero.gradient {
+    background: radial-gradient(circle, #dff2fc, #ccd5fb, #ccbafc, #f6c1b9);
+    background-size: 150% 150%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 50% 50%;
+    }
+    50% {
+      background-position: 100% 0%;
+    }
+    75% {
+      background-position: 50% 50%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
   .hero h1, .hero h2, .hero strong, .hero a{
     --color: var(--primary-black) !important;
     text-align: center;
@@ -80,6 +117,22 @@
     }
   }
 
+  .overlay {
+    position: relative;
+    z-index: 2;
+    margin-top: -30%; /* Negative margin to pull the div up */
+}
+
+  .transparent-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: -15%; /* Negative margin to pull the div up */
+    opacity: 0.5; /* Adjust transparency as needed */
+    z-index: 1;
+  }
+
+
   .review {
     margin-top: 0rem;
     padding: 1rem;
@@ -100,34 +153,51 @@
     line-height: 1.25;
     text-align: center;
   }
+
+  details summary[role="button"] {
+    text-align: center !important;
+    display: block !important;
+  }
   
-  /* Add rounded corners and thick black outline to the button */
-  .dark-button {
-    background-color: var(--primary-blue) !important;
-    color: black; 
-    border: 4px solid white ; /* Adjust this value to control the thickness of the outline */
-    padding: 10px 20px; /* Add padding to give the button some space around the text */
-    width: 100%;
-    transition: background-color 0.3s, color 0.3s, opacity 0.3s, border-color 0.3s; /* Add smooth transition on hover */
+  details[role="list"] summary + ul li {
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    nav details[role="list"] summary + ul {
+      position: relative;
+      z-index: 3;
+    }
+    h1 {
+      display: none;
+    }
   }
 
-/* Hover styles */
-    .dark-button:hover {
-    background-color: var(--primary-black) !important; /* Change background color on hover */
-    color: var(--primary-blue) !important; /* Make text transparent on hover */
-  }
-
-  /* Add rounded corners and thick black outline to the button */
+/* Add rounded corners and thick black outline to the button */
   .rounded-button {
-    background-color: transparent;
-    border: 4px solid var(--primary-black) ; /* Adjust this value to control the thickness of the outline */
+    font-weight: bold !important;
+    text-align: center !important;
+    color: var(--primary-black) !important;
+    --color: var(--primary-black) !important;
+    --primary: var(--primary-black) !important;
+    --background-color: var(--transparent-button) !important;
+    --border-color: var(--primary-black) !important;
+    background-color: var(--transparent-button); /* Semi-transparent white background */
+    border: 4px solid var(--primary-black); /* Adjust this value to control the thickness of the outline */
     padding: 10px 20px; /* Add padding to give the button some space around the text */
     width: 100%;
+    border-radius: 10px; /* Adjust this value to control the roundness of the corners */
     transition: background-color 0.3s, color 0.3s, opacity 0.3s, border-color 0.3s; /* Add smooth transition on hover */
   }
 
 /* Hover styles */
-    .rounded-button:hover {
+  .rounded-button:hover {
     background-color: var(--primary-black) !important; /* Change background color on hover */
-    --color: var(--primary-blue) !important; /* Make text transparent on hover */
+    --primary: var(--primary-blue) !important;
+    color: var(--primary-blue) !important; /* Make text blue on hover */
   }
+
+  .rounded-image {
+    border-radius: 20px; /* Adjust the value as needed */
+    object-fit: cover;
+}

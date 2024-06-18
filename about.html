@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About - No BS Technologies Inc</title>
+    <!-- Open Graph / Facebook --> <!-- this is what Facebook and other social websites will draw on -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://no-bs-repairs.com/about">
+    <meta property="og:title" content="About No BS Technologies Inc.">
+    <meta property="og:description" content=
+    "Learn more about No BS Technologies Inc, serving Tsawwassen, Delta, and Vancouver. We specialize in small business IT consulting, Apple MacBook & iMac repair, liquid damage and motherboard repair, microsoldering, and Nintendo Switch repair. Discover our honest, reliable, and efficient services."
+    >    
+    <meta name="image" property="og:image" content="banner-social.webp">
+    <meta name="author" content="No BS Technologies Inc."> 
+    <meta
+      name="description"
+      content="Information about No BS Tech"/>
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="canonical" href="https://no-bs-repairs.com/about" />
+
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="custom.css"/>
+    <link rel="stylesheet" href="rainbow-button.css"/>
+  </head>
+  <body>
+    <!-- Body-->
+
+    <!-- Hero Template-->
+    <div id="hero"></div>
+
+    <!-- Main -->
+    <main class="container">
+    <!-- Info -->
+      <div class="grid">
+          <div>
+            <article class="review">
+              <h2>Who runs the business?</h2>
+              <p style="text-align: left;">
+                Growing up in Calgary, I was fortunate to have an incredibly supportive family, who helped my entrepreneurial spirit since I was 9 or 10 years old. By raking leaves for neighbours, and starting who knows how many ice tea & baked goods stands, I found my footing for and yearing for community connection. Around the same time I got interested in electronics after going to the Western Canadian Robotics Society where I learned to solder, code, and make simple circuits.
+                <br>
+                <br>
+                During high school I started working for a busy shop that did computer & phone repairs and sales. By 2014 I was partially managing the shop, and in 2015 at the age of 18 I quit to start this company out of my parents garage.
+                <br>
+                <br>
+                Ever since, I’ve been doing my best to keep this business going, and I’m not always perfect at it, as there’s always improvements to be made and personal growth and discovery to be had.
+              </p>
+              <blockquote>~ Corbin Auriti</blockquote>
+            </article>
+          </div>
+          <div>
+            <svg width="0" height="0">
+              <defs>
+                  <clipPath id="blobbyClip" clipPathUnits="objectBoundingBox">
+                      <path d="M0.5,0.05 C0.65,0.05 0.85,0.1 0.9,0.2 C0.95,0.3 0.95,0.45 0.85,0.55 C0.75,0.65 0.65,0.75 0.5,0.75 C0.35,0.75 0.25,0.65 0.15,0.55 C0.05,0.45 0.05,0.3 0.1,0.2 C0.15,0.1 0.35,0.05 0.5,0.05 Z" />
+                  </clipPath>
+              </defs>
+          </svg>
+            <p><img src="corbin.jpg" width="500" alt="Photo of Corbin Auriti Owner of No BS Technologies in front of a wooden background wearing a blue shirt" class="rounded-image" style="clip-path: url(#blobbyClip);"></p>          
+          </div>
+        </div>
+      </main>
+    <!-- ./ Main -->
+
+    <!-- Footer Template-->
+    <div id="footer"></div>
+
+      <script>
+        // Function to load HTML content
+        function loadHTML(elementId, url, callback) {
+          fetch(url)
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById(elementId).innerHTML = data;
+              if (callback) callback();
+            })
+            .catch(error => console.error('Error loading HTML:', error));
+        }
+
+         // Function to replace H1 element
+        function replaceTitle(elementId, newText) {
+          const container = document.getElementById(elementId);
+          const h1 = container.querySelector('h1');
+          if (h1) {
+            h1.textContent = newText;
+          }
+        }
+    
+        // Load hero and footer
+        loadHTML('hero', 'hero.html', () => replaceTitle('hero', 'About Me'));
+        loadHTML('footer', 'footer.html');
+      </script>
+
+  </body>
+</html>

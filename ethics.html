@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ethics - No BS Technologies Inc</title>
+    <!-- Open Graph / Facebook --> <!-- this is what Facebook and other social websites will draw on -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://no-bs-repairs.com/ethics">
+    <meta property="og:title" content="Ethics No BS Technologies Inc.">
+    <meta property="og:description" content=
+    "Ethical Tech Solutions: Serving Tsawwassen, Delta & Vancouver with integrity and transparency. We specialize in small business IT consulting, Apple MacBook & iMac repair, liquid damage & motherboard repair, microsoldering, and Nintendo Switch repair. Committed to honest, reliable, and efficient services grounded in ethical principles.">    
+    <meta name="image" property="og:image" content="banner-social.webp">
+    <meta name="author" content="Corbin Auriti - No BS Technologies Inc."> 
+    <meta
+      name="description"
+      content="Information about No BS Tech's Ethical guidelines and principles"/>
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="canonical" href="https://no-bs-repairs.com/ethics" />
+
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="custom.css"/>
+    <link rel="stylesheet" href="rainbow-button.css"/>
+  </head>
+  <body>
+    <!-- Body-->
+
+    <!-- Hero Template-->
+    <div id="hero"></div>
+
+    <!-- Main -->
+    <main class="container">
+    <!-- Info -->
+      <div class="grid">
+          <div>
+            <article class="review">
+              <h2>Valuing You and The Community 🏳️‍🌈 ✊🏿</h2>
+              <p>
+                Valuing you means respecting you, the client, in ways such as honouring your time and privacy, which are in short supply these days. 
+                This also means valuing you as an individual, group, identity and community in ways that go unspoken. We ensure that everyone feels welcome and accepted in any way we can. 
+              </p>
+            </article>
+          </div>
+          <div>
+            <article class="review">
+              <h2>Honesty</h2>
+              <p>
+                We believe it's up to us to be transparent, never try to exaggerate a problem to get more money out of you. For small businesses, this means we prioritize your best interests and ensure that our recommendations are both cost-effective and beneficial for your operations, not what might make commission. If your device is still under warranty with the original manufacturer, and they can fix it for a lower price or even free, we will always let you know.
+              </p>
+            </article>
+          </div>
+        </div>
+      <div class="grid">
+        <div>
+          <article class="review">
+            <h2>Humility</h2>
+            <p>
+              If we don't think we are the best option to help you, we'll happily help find you info for somewhere else that could help you best in that situation. We want to be a trusted resource of information for your tech needs, sometimes this entails us not taking your business just for the sake of making money.
+            </p>
+          </article>
+        </div>
+          <div>
+            <article class="review">
+              <h2>Real Reviews</h2>
+              <p>
+                All reviews we have were posted only by our real clients at their own discretion. We never pay anyone or give any discounts to get a good review. While we do ask our clients if they would like to review us as it helps us out, we do this some time after their service, and make sure to tell them to write a review based on their honest experience, good, bad or somewhere in between.
+              </p>
+            </article>
+          </div>
+          <div>
+            <article class="review">
+              <h2>High Quality Parts and Repairs</h2>
+              <p>
+                All repairs and services are done using the best quality parts available to us as an third-party repair business (This means they’re not always new or OEM). For repairs done on devices from the last 7 years, One year of parts and labour warranty is given, and we promise to honour that.
+              </p>
+            </article>
+          </div>
+      </div>
+    </main>
+    <!-- ./ Main -->
+
+    <!-- Footer Template-->
+    <div id="footer"></div>
+
+      <script>
+        // Function to load HTML content
+        function loadHTML(elementId, url, callback) {
+          fetch(url)
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById(elementId).innerHTML = data;
+              if (callback) callback();
+            })
+            .catch(error => console.error('Error loading HTML:', error));
+        }
+
+         // Function to replace H1 element
+        function replaceTitle(elementId, newText) {
+          const container = document.getElementById(elementId);
+          const h1 = container.querySelector('h1');
+          if (h1) {
+            h1.textContent = newText;
+          }
+        }
+    
+        // Load hero and footer
+        loadHTML('hero', 'hero.html', () => replaceTitle('hero', 'Ethics at No BS Technologies Inc.'));
+        loadHTML('footer', 'footer.html');
+      </script>
+
+  </body>
+</html>

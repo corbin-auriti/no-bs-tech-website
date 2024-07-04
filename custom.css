@@ -205,3 +205,12 @@
     border-radius: 20px; /* Adjust the value as needed */
     object-fit: cover;
 }
+
+  .left-align *:not(h3) {
+    text-align: left !important;
+  }
+  .left-align ul,
+  .left-align ol {
+  margin-left: 0; /* Remove default margin from lists */
+  padding-left: 100px; /* Indent lists */
+  }

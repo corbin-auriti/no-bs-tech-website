@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy - No BS Technologies Inc</title>
+    <!-- Open Graph / Facebook --> <!-- this is what Facebook and other social websites will draw on -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://no-bs-repairs.com/privacy">
+    <meta property="og:title" content="Policy for No BS Technologies Inc.">
+    <meta property="og:description" content=
+    "Privacy Policy for No BS Technologies Inc, serving Tsawwassen, Delta, and Vancouver. We specialize in small business IT consulting, Apple MacBook & iMac repair, liquid damage and motherboard repair, microsoldering, and Nintendo Switch repair. Discover our honest, reliable, and efficient services."
+    >    
+    <meta name="image" property="og:image" content="banner-social.webp">
+    <meta name="author" content="No BS Technologies Inc."> 
+    <meta
+      name="description"
+      content="Information about No BS Tech"/>
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="canonical" href="https://no-bs-repairs.com/privacy" />
+
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="custom.css"/>
+    <link rel="stylesheet" href="rainbow-button.css"/>
+  </head>
+  <body>
+    <!-- Body-->
+
+    <!-- Hero Template-->
+    <div id="hero"></div>
+
+    <!-- Main -->
+    <main class="container">
+    <!-- Info -->
+      <div class="grid">
+          <div class="left-align">
+            <article class="review">
+              <h3>No BS Technologies Inc. <br> Privacy Policy (2024)</h3>
+                <p>No BS Technologies Inc. ("we," "us," "our") is committed to protecting the privacy and security of our clients' personal information. 
+                  This Privacy Policy outlines how we collect, use, and protect personal data in alignment with ISO 27001 standards.</p>
+                
+                <h4>Collection of Personal Information</h4>
+                <p>We collect personal information solely for the purpose of providing IT consulting, device repair, and data recovery services. This may include:</p>
+                <ul>
+                  <li>Contact information (name, email address, phone number and physical address)</li>
+                  <li>Device information (make, model, serial number, technical specifications)</li>
+                  <li>Service details and history</li>
+                </ul>
+                
+                <h4>Use of Personal Information</h4>
+                <p>The personal information we collect is used to:</p>
+                <ul>
+                  <li>Provide and manage our IT consulting, device repair, and data recovery services</li>
+                  <li>Communicate with clients regarding their service requests</li>
+                  <li>Improve our services based on client feedback</li>
+                </ul>
+                
+                <h4>Data Protection and Security</h4>
+                <p>We implement strict security measures to protect personal information, including:</p>
+                <ul>
+                  <li>Encryption of sensitive data during transmission and storage</li>
+                  <li>Access controls to ensure only authorized personnel handle personal information</li>
+                  <li>Regular internal security audits and compliance checks in line with ISO 27001 standards</li>
+                </ul>
+                
+                <h4>Consent and Data Handling</h4>
+                <p>We will never store, transmit, or retrieve sensitive data without explicit consent from our clients. Personal information and technical device information can be deleted upon request. Clients can request the deletion of their personal information by contacting us.</p>
+                <h4>Data Retention</h4>
+                <p>We retain personal information only for as long as necessary to fulfill the purposes outlined in this policy, or as required by law. Upon request, we will securely delete personal information in accordance with industry best practices.</p>
+
+                <h4>Third Parties</h4>
+                <p>Over the course of normal business operations, we utilize third-party services that may capture some of your basic personal contact and device information. We ensure best effort to apply your Client Rights in regards to these third party services. <br> Please review their privacy policies for more information:</p>
+                <ul>
+                  <li><strong><a rel="noreferrer" href="https://www.zoho.com/privacy-commitment.html">Zoho Desk</a></strong></li>
+                  <li><strong><a rel="noreferrer" href="https://support.google.com/a/answer/60762">Google Workspace</a></strong></li>
+                  <li><strong><a rel="noreferrer" href="https://cal.com/privacy">Cal.com</a></strong></li>
+                  <li><strong><a rel="noreferrer" href="https://www.openphone.com/privacy">OpenPhone</a></strong></li>
+                  <li><strong><a rel="noreferrer" href="https://www.facebook.com/policy.php">Facebook Business</a></strong></li>
+                </ul>
+
+                <h4>Client Rights</h4>
+                <p>Clients have the right to:</p>
+                <ul>
+                  <li>Access their personal information</li>
+                  <li>Request corrections to their personal information</li>
+                  <li>Request deletion of their personal information</li>
+                  <li>Withdraw consent for data processing</li>
+                </ul>
+                
+                <h4>Updates to this Privacy Policy</h4>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify clients of any significant changes and obtain consent where necessary.</p>
+                <hr><p>By using our services, you agree to the terms of this Privacy Policy.</p>
+            </article>
+          </div>
+        </div>
+      </main>
+    <!-- ./ Main -->
+
+    <!-- Footer Template-->
+    <div id="footer"></div>
+
+      <script>
+        // Function to load HTML content
+        function loadHTML(elementId, url, callback) {
+          fetch(url)
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById(elementId).innerHTML = data;
+              if (callback) callback();
+            })
+            .catch(error => console.error('Error loading HTML:', error));
+        }
+
+         // Function to replace H1 element
+        function replaceTitle(elementId, newText) {
+          const container = document.getElementById(elementId);
+          const h1 = container.querySelector('h1');
+          if (h1) {
+            h1.textContent = newText;
+          }
+        }
+    
+        // Load hero and footer
+        loadHTML('hero', 'hero.html', () => replaceTitle('hero', 'Privacy Policy'));
+        loadHTML('footer', 'footer.html');
+      </script>
+
+  </body>
+</html>

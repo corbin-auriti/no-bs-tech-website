@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Community Repair Fund | Reduced-Cost Computer Repair in South Delta</title>
+    <meta
+      name="description"
+      content="The Community Repair Fund provides limited reduced-cost computer repair labour for neighbours facing genuine financial barriers in Tsawwassen, Ladner and South Delta."
+    />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="canonical" href="https://no-bs-repairs.com/community-repair-fund" />
+
+    <!-- Open Graph / Facebook -->
+    <!-- this is what Facebook and other social websites will draw on -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="No BS Technologies Inc">
+    <meta property="og:url" content="https://no-bs-repairs.com/community-repair-fund">
+    <meta property="og:title" content="Community Repair Fund | No BS Technologies Inc">
+    <meta property="og:description" content="We reserve a small number of reduced-cost repair appointments for neighbours facing genuine financial barriers in Tsawwassen &amp; South Delta. Availability is limited; please ask.">
+    <meta property="og:image" content="https://no-bs-repairs.com/banner-social.webp">
+    <meta property="og:locale" content="en_CA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Community Repair Fund | No BS Technologies Inc">
+    <meta name="twitter:description" content="Limited reduced-cost computer repair labour for neighbours facing genuine financial barriers in Tsawwassen and South Delta. Please ask when booking.">
+    <meta name="twitter:image" content="https://no-bs-repairs.com/banner-social.webp">
+    <meta name="author" content="Corbin Auriti - No BS Technologies Inc">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://no-bs-repairs.com/#business",
+            "name": "No BS Technologies Inc",
+            "url": "https://no-bs-repairs.com/",
+            "telephone": "+1-604-256-5895",
+            "image": "https://no-bs-repairs.com/banner-social.webp",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "#202 1624 56 St",
+              "addressLocality": "Delta",
+              "addressRegion": "BC",
+              "postalCode": "V4L 0A2",
+              "addressCountry": "CA"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 49.0363,
+              "longitude": -123.0801
+            },
+            "areaServed": ["Tsawwassen", "Ladner", "South Delta", "Delta"]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://no-bs-repairs.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Community Repair Fund", "item": "https://no-bs-repairs.com/community-repair-fund" }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="custom.css"/>
+    <link rel="stylesheet" href="rainbow-button.css"/>
+  </head>
+  <body>
+    <!-- Body-->
+
+    <!-- Hero Template-->
+    <div id="hero"></div>
+
+    <!-- Main -->
+    <main class="container">
+      <h1 class="page-title">Community Repair Fund</h1>
+      <!-- Info -->
+      <div class="grid">
+        <div>
+          <article class="review">
+            <p>
+              We reserve a small number of reduced-cost appointments for neighbours
+              facing genuine financial barriers, people who need a working device and
+              cannot realistically pay the full labour cost. The fund currently supports
+              up to one hour of reduced-cost labour per month.
+            </p>
+            <p>
+              The fund is a real, budgeted program. It is mutual aid with clear limits,
+              so the support can continue for the community and remain sustainable for us.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <article class="review">
+            <h2>How to Ask</h2>
+            <p>
+              Just ask, mention it when you <a href="./appointment">book</a> or
+              through our <a href="./contact-form">contact form</a>. If a community
+              organization you work with thinks a repair qualifies, they can also
+              reach out on your behalf with the organization's name, a short
+              description of the need, and the device. Parts are paid by the customer
+              or a sponsor, the Fund covers labour only.
+            </p>
+          </article>
+        </div>
+        <div>
+          <article class="review">
+            <h2>Who It's For</h2>
+            <p>
+              Neighbours facing genuine financial barriers and a real access, safety or
+              employment need, subject to available capacity.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <article class="review">
+            <h2>What It Covers</h2>
+            <p>
+              The Fund covers labour only. Parts are paid by the customer or a sponsor,
+              and business services are not discounted. It is community support for
+              neighbours, not a commercial discount.
+            </p>
+          </article>
+        </div>
+      </div>
+
+    </main>
+    <!-- ./ Main -->
+
+    <!-- Footer Template-->
+    <div id="footer"></div>
+
+    <script>
+      // Function to load HTML content
+      function loadHTML(elementId, url, callback) {
+        fetch(url)
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+            if (callback) callback();
+          })
+          .catch(error => console.error('Error loading HTML:', error));
+      }
+
+      // Function to replace H1 element
+      function replaceTitle(elementId, newText) {
+        const container = document.getElementById(elementId);
+        const h1 = container.querySelector('h1');
+        if (h1) {
+          h1.textContent = newText;
+        }
+      }
+
+      // Load hero and footer
+      loadHTML('hero', 'hero.html', () => replaceTitle('hero', 'Community Repair Fund - No BS Technologies Inc.'));
+      loadHTML('footer', 'footer.html');
+    </script>
+
+  </body>
+</html>

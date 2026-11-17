@@ -2,6 +2,7 @@
 :root {
     --primary-blue: #A8D4D7 !important;
     --primary-black: #0F0D0B !important;
+    --primary-white: #888D92 !important;
     --transparent-button: #ffffff8f;
     --spacing-company: 0.5rem;
     --block-spacing-vertical: 0.5rem;
@@ -12,6 +13,15 @@
   
   h1 {
     color: var(--primary-black);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .page-title {
+    color: var(--primary-white);
+    margin: 2rem 0 1rem;
+    text-align: center;
   }
 
   /* Typography */
@@ -72,8 +82,17 @@
     }
   }
   
-  .hero h1, .hero h2, .hero strong, .hero a{
+  .hero h2, .hero strong, .hero a{
     --color: var(--primary-black) !important;
+    text-align: center;
+  }
+  .hero-kicker {
+    color: var(--primary-black);
+    font-size: clamp(1.25rem, 3vw, 2rem) !important;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 1rem auto 1.5rem;
+    max-width: 42rem;
     text-align: center;
   }
   .hero h2 {
@@ -128,7 +147,7 @@
     position: relative;
     width: 100%;
     height: auto;
-    margin-top: -15%; /* Negative margin to pull the div up */
+    margin-top: -25%; /* Negative margin to pull the div up */
     opacity: 0.5; /* Adjust transparency as needed */
     z-index: 1;
   }
@@ -169,11 +188,19 @@
       position: relative;
       z-index: 3;
     }
-    h1 {
-      display: none;
-    }
     section {
       --block-spacing-vertical: calc(var(--spacing) * 3);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
     }
   }
 

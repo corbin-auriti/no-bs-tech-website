@@ -3,16 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact Us & Info - No BS Technologies Inc - Mac Repair and Nintendo Switch Repair</title>
+    <title>Contact No BS Technologies | Computer Repair and IT Support</title>
     <!-- Open Graph / Facebook --> <!-- this is what Facebook and other social websites will draw on -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="No BS Technologies Inc">
     <meta property="og:url" content="https://no-bs-repairs.com/contact-form">
-    <meta property="og:title" content="No BS Tech Appointment">
-    <meta property="og:description" content="Contact Us No BS Tech - IT Services, Mac Repair and Nintendo Switch Repair">
-    <meta property="og:image" content="banner-social.webp">
+    <meta property="og:title" content="Contact No BS Technologies Inc">
+    <meta property="og:description" content="Questions about computer repair, console repair or business IT in Tsawwassen, Ladner or South Delta? Send us a message.">
+    <meta property="og:image" content="https://no-bs-repairs.com/banner-social.webp">
+    <meta property="og:locale" content="en_CA">
     <meta
       name="description"
-      content="No BS Repairs for Delta and Tsawwassen. High Quality and Fast Macbook Repair &amp; Nintendo Switch Repair"
+      content="Questions about computer repair, console repair or business IT in Tsawwassen, Ladner or South Delta? Send us a message and we'll get back to you as soon as possible."
     />
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="canonical" href="https://no-bs-repairs.com/contact-form" />
@@ -32,12 +34,11 @@
     <!-- Main Contact Form Body-->
     <main class="container">
         <article>
-            <h2>Send a Message 📬️</h2>
-            <h4>
-                Please feel free to send us any questions about a service, 
-                repair or any other inquiries, 
-                and we'll be happy to get back to you as soon as it's possible to do so.
-            </h4>
+            <h1 class="page-title">Contact No BS Technologies</h1>
+            <p>
+                Have a question about computer repair, console repair or business IT?
+                Send us the details and we will reply as soon as we can.
+            </p>
            <form id="fs-frm" name="contact-form" accept-charset="utf-8" action="https://formspree.io/f/meqbopoz" method="post">
                 <fieldset id="fs-frm-inputs">
                     <label for="name">Name</label>
@@ -45,15 +46,16 @@
                     <label for="email-address">Email Address</label>
                     <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required>
                     <label for="telephone">Telephone Number</label>
-                    <input type="telephone" name="telephone" id="telephone" placeholder="(555) 555-5555" required>
+                    <input type="tel" name="telephone" id="telephone" placeholder="(555) 555-5555" required>
                     <label for="message">Message</label>
-                    <textarea rows="6" name="message" id="message" placeholder="Your Message Here :)" required=""></textarea>
+                    <textarea rows="6" name="message" id="message" placeholder="Tell us what you need help with" required></textarea>
                     <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
                 </fieldset>
-                <input type="submit" value="Submit" class="rounded-button">
+                <input type="submit" value="Send Message" class="rounded-button">
             </form>
             <small>Form sent with Formspree.io (<a href="https://formspree.io/legal/privacy-policy/">Privacy Policy</a>)</small>
         </article>
+    </main>
 
         <div id="footer"></div>
 
@@ -80,7 +82,7 @@
         }
     
         // Load hero and footer
-        loadHTML('hero', 'hero.html', () => replaceTitle('hero', 'Contact Us - No BS Technologies Inc.'));
+        loadHTML('hero', 'hero.html', () => replaceTitle('hero', 'Contact No BS Technologies'));
         loadHTML('footer', 'footer.html');
       </script>
         
